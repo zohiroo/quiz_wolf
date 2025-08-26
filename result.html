@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Your Wolf Result</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap');
+    body {
+      background: url('YOUR-RESULT-BG.jpg') no-repeat center center fixed; /* غيّرها */
+      background-size: cover;
+      font-family: 'Open Sans', sans-serif;
+      margin: 0;
+      padding: 0;
+      color: #f1f5f9;
+    }
+    .container {
+      background-color: rgba(0, 0, 0, 0.75);
+      max-width: 700px;
+      margin: 50px auto;
+      padding: 30px;
+      border-radius: 18px;
+      box-shadow: 0 0 20px rgba(0,0,0,0.8);
+      text-align: center;
+    }
+    h1 {
+      font-size: 2.5rem;
+      margin-bottom: 14px;
+      color: #facc15; /* نفس لون العنوان */
+    }
+    .result {
+      margin-top: 10px;
+      padding: 20px;
+      background-color: #1e293b;
+      border-radius: 12px;
+      font-size: 1.1rem;
+      line-height: 1.6rem;
+    }
+    .title {
+      font-weight: 700;
+      font-size: 1.4rem;
+      margin-bottom: 8px;
+    }
+    .icon {
+      font-size: 2rem;
+      margin-bottom: 8px;
+      display: block;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Your Wolf Spirit</h1>
+    <div class="result" id="resultBox">
+      Loading your result...
+    </div>
+  </div>
+
+  <script>
+    const results = [
+      {
+        icon: "🐺",
+        title: "The Lone Wolf",
+        desc: "Independent and strong-willed. You trust your instincts and walk your path with confidence."
+      },
+      {
+        icon: "🛡️",
+        title: "The Protector Wolf",
+        desc: "Loyal and caring. You defend your pack and value family above all."
+      },
+      {
+        icon: "👑",
+        title: "The Alpha Wolf",
+        desc: "A natural leader who inspires and protects. Others look to you for courage and direction."
+      },
+      {
+        icon: "🌙",
+        title: "The Mystic Wolf",
+        desc: "Wise and intuitive. You sense what others cannot and seek deeper truths."
+      }
+    ];
+
+    const r = results[Math.floor(Math.random() * results.length)];
+    const box = document.getElementById('resultBox');
+    box.innerHTML = `
+      <span class="icon">${r.icon}</span>
+      <div class="title">${r.title}</div>
+      <div>${r.desc}</div>
+    `;
+  </script>
+</body>
+</html>
