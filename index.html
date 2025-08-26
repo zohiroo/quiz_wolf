@@ -27,7 +27,7 @@
       text-align: center;
       font-size: 2.5rem;
       margin-bottom: 30px;
-      color: #facc15; /* نفس اللون */
+      color: #facc15; /* أصفر */
     }
     .question {
       margin-bottom: 25px;
@@ -48,7 +48,7 @@
       outline: none;
     }
     button {
-      background-color: #dc2626; /* نفس الأحمر */
+      background-color: #dc2626; /* أحمر */
       color: white;
       padding: 14px 28px;
       font-size: 1.1rem;
@@ -60,9 +60,9 @@
       width: 100%;
       transition: background-color .2s ease;
     }
-    button:hover { background-color: #b91c1c; } /* نفس الهوفر */
+    button:hover { background-color: #b91c1c; }
 
-    /* شاشة الانتظار داخل نفس الصندوق */
+    /* شاشة الانتظار */
     #loading {
       display: none;
       margin-top: 20px;
@@ -134,7 +134,7 @@
 
       <button type="button" id="ctaBtn">Reveal My Wolf Type</button>
 
-      <!-- شاشة انتظار قبل التحويل -->
+      <!-- شاشة انتظار -->
       <div id="loading">
         <div class="spinner"></div>
         Preparing your result... please wait.
@@ -143,7 +143,7 @@
   </div>
 
   <script>
-    // ضع رابط الـ OGAds Locker هنا
+    // رابط الكونتنت لوكر الخاص بك
     const OGADS_LOCKER_URL = "https://unlockcontent.net/cl/i/ve9do9";
 
     const form = document.getElementById('quizForm');
@@ -151,22 +151,20 @@
     const loading = document.getElementById('loading');
 
     ctaBtn.addEventListener('click', function () {
-      // تأكد أن كل الأسئلة مختارة (required على select يكفي، وهذا تأكيد إضافي)
+      // تحقق أن كل الأسئلة مختارة
       const selects = form.querySelectorAll('select');
       for (const sel of selects) {
         if (!sel.value) { sel.focus(); return; }
       }
 
-      // إظهار شاشة انتظار قصيرة ثم التحويل إلى OGAds
+      // إظهار شاشة انتظار قصيرة ثم التحويل
       ctaBtn.disabled = true;
       loading.style.display = 'block';
 
       setTimeout(() => {
-        window.location.href = https://unlockcontent.net/cl/i/ve9do9 ;
-      }, 2000); // مهلة قصيرة ل UX
+        window.location.href = OGADS_LOCKER_URL;
+      }, 2000); // 2 ثواني
     });
   </script>
 </body>
 </html>
-
-
